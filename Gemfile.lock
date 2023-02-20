@@ -96,6 +96,10 @@ GEM
       irb (>= 1.5.0)
       reline (>= 0.3.1)
     debug_inspector (1.1.0)
+    dotenv (2.8.1)
+    dotenv-rails (2.8.1)
+      dotenv (= 2.8.1)
+      railties (>= 3.2)
     erubi (1.12.0)
     faker (3.1.1)
       i18n (>= 1.8.11, < 2)
@@ -226,6 +230,7 @@ DEPENDENCIES
   bootsnap
   capybara
   debug
+  dotenv-rails
   faker
   importmap-rails
   jbuilder
@@ -241,7 +246,7 @@ DEPENDENCIES
   webdrivers
 
 RUBY VERSION
-   ruby 3.0.0p0
+   ruby 3.2.1p31
 
 BUNDLED WITH
    2.4.5
