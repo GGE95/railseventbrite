@@ -22,3 +22,6 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+URL de l'application sur Herokuapp :
+https://railseventbrite.herokuapp.com/
