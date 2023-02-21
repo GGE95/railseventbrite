@@ -5,7 +5,10 @@ class Attendance < ApplicationRecord
   after_create :admin_send
 
   def admin_send
-    AdminMailer.participation_email(self).deliver_now
+    admin = self.event.administrator
+    user = self.user
+    event = self.event
+    AdminMailer.participation_email(admin, user, event).deliver_now
   end
 
 
