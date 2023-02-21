@@ -1,0 +1,18 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+            <div class="card">
+              <h4 class="card-header"><%= @event.title%></h4>
+              <div class="card-body">
+                <h6 class="card-title"><%= @event.description%></h6>
+                <p class="card-text">Organisé par : <%= @all_users.find(@event.administrator_id).email%></p>
+                <p class="card-text">Date de début : <%= @event.start_date%></p>
+                <p class="card-text">Durée : <%= @event.duration%> min</p>
+                <p class="card-text">Tarif : <%= @event.price%> €</p>
+                <p class="card-text">Lieu : <%= @event.location%></p>
+              </div>
+            </div>
+    </div>
+  </div>
+</div>
+

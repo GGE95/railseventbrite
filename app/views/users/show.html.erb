@@ -1,0 +1,31 @@
+
+<div class="d-flex justify-content-center">
+  <div class="card" style="width: 18rem;">
+    <div class="card-body">
+      <h5 class="card-title"><%= @current_user.first_name%> <%= @current_user.last_name%></h5>
+      <h6 class="card-subtitle mb-2 text-muted"><%= @current_user.email%>e</h6>
+      <p class="card-text"><%= @current_user.description%></p>
+      <%= link_to "Modifie ton profil", edit_user_registration_path, class: "btn btn-primary" %>
+    </div>
+  </div>
+</div>
+
+<% @all_events.each_slice(3) do |group|%>
+  <div class="container">
+    <div class="row">
+      <% group.each do |i|%>
+        <% if @current_user.id == i.administrator_id %>
+          <div class="col">
+            <div class="card">
+              <h4 class="card-header"><%= i.title%></h4>
+              <div class="card-body">
+                <a href="<%= event_path(i)%>" class="btn btn-primary">Voir l'événement</a>
+              </div>
+            </div>
+          </div>
+        <% end%>
+      <% end %>
+    </div>
+  </div>
+  <br>
+<% end%>
