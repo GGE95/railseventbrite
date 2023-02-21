@@ -1,6 +1,10 @@
 require "active_support/core_ext/integer/time"
 
 Rails.application.configure do
+
+  # l'email va te donner un lien à cliquer qui va rediriger vers l'application sur un formulaire pour changer le mot de passe. Il faut donc dire à Rails "pour la production (sur Heroku), l'URL de mon app est : monapp.herokuapp.com".
+  config.action_mailer.default_url_options = { :host => 'eventbrite.herokuapp.com' }
+
   # Settings specified here will take precedence over those in config/application.rb.
 
   # Code is not reloaded between requests.
