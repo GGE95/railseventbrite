@@ -1,6 +1,6 @@
 class AdminMailer < ApplicationMailer
   
-  default from: 'no-reply@railseventbrite.fr'
+  default from: 'ghislain.genet-prestataire@laposte.fr'
 
   def participation_email(admin, user, event)
     #on récupère l'instance user pour ensuite pouvoir la passer à la view en @user
