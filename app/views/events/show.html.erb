@@ -1,3 +1,6 @@
+<% if flash[:notice] %>
+  <div class="alert alert-success"><%= flash[:notice] %></div>
+<% end %>
 <div class="container">
   <div class="row">
     <div class="col">
@@ -10,6 +13,7 @@
                 <p class="card-text">Durée : <%= @event.duration%> min</p>
                 <p class="card-text">Tarif : <%= @event.price%> €</p>
                 <p class="card-text">Lieu : <%= @event.location%></p>
+                <%= button_to "Passer commande (NEXT GEN)", checkout_create_path(total: @price), class: "btn btn-primary", data: { turbo: false } %>
               </div>
             </div>
     </div>

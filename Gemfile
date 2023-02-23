@@ -9,6 +9,7 @@ gem "faker"
 gem "bcrypt"
 gem 'dotenv-rails'
 gem 'devise'
+gem 'stripe'
 
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
